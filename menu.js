@@ -14,3 +14,29 @@ menu.addEventListener('click', ()=>{
 overlay.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+
+
+
+//Parte das áreas de conhecimento
+
+
+document.querySelectorAll('.card').forEach((card) => {
+    card.addEventListener('mouseenter', () => {
+      card.querySelector('.tooltip').style.opacity = '1';
+    });
+  
+    card.addEventListener('mouseleave', () => {
+      card.querySelector('.tooltip').style.opacity = '0';
+    });
+  });
+  
+
+
+
+  //menu hamburger
+
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("visible");
+    menu.classList.toggle("hidden");
+}
