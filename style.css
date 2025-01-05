@@ -8,7 +8,7 @@
 
 body {
     background-color: #000;
-    height: 100vh;
+    height: 500vh;
 }
 
 .interface {
@@ -154,6 +154,22 @@ header nav.menu-desktop ul li {
     left: 0;
     z-index: 88888;
     display: none;
+}
+
+
+.menu-desktop-a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #4200ff;
+    transition: 0.4s ease;
+}
+
+.menu-desktop-a:hover::after{
+    width: 100%;
 }
 
 /* ESTILO DO TOPO DO SITE */
@@ -511,4 +527,96 @@ footer .line-footer p a {
     footer .line-footer {
         text-align: center;
     }
+}
+
+
+
+
+/*Parte das linguagens onde eu coloquei as que eu sei ate agr*/
+
+.conhecimentos {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .conhecimentos h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+  
+  .ponto {
+    color: #4200ff; /* Roxo */
+  }
+  
+  .instrucao {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 2rem;
+  }
+  
+  .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+  }
+  
+  .card {
+    background-color: #1a1a1a;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+  }
+  
+  .card .tooltip {
+    position: absolute;
+    bottom: -30px;
+    background-color: #4200ff;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .card:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .card i {
+    font-size: 2rem;
+    color: #4200ff;
+  }
+
+
+
+  /* Estilo do fundo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem */
+    background-color: #000; /* Fundo preto */
+}
+
+/* Estilo do "thumb" (parte que se move) */
+::-webkit-scrollbar-thumb {
+    background-color: #4200ff; /* Cor da linha de movimento */
+    border-radius: 4px; /* Arredondamento das bordas */
+}
+
+/* Estilo do "track" (pista da barra de rolagem) */
+::-webkit-scrollbar-track {
+    background-color: #000; /* Fundo preto */
 }
